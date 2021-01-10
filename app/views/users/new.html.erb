@@ -1,0 +1,36 @@
+<h2>ユーザー新規作成</h2>
+
+<%= render "shared/error", obj: @user %>
+
+<%= form_for @user do |f| %>
+    <table>
+        <tr>
+            <th><%= f.label :content,"予定" %></th>
+            <td><%= f.text_field :content %></td>
+        </tr>
+        <tr>
+            <th><%= f.label :start ,"開始日" %></th>
+            <td><%= f.date_field :start %></td>
+        </tr>
+        <tr>
+            <th><%= f.label :end ,"終了日" %></th>
+            <td><%= f.date_field :end %></td>
+        </tr>
+        <tr>
+            <th><%= f.label :allday ,"終日" %></th>
+            <td><%= f.check_box :allday, :as => :boolean %></td>
+        </tr>
+        <tr>
+            <th><%= f.label :notes,"備考" %></th>
+            <td><%= f.text_field :notes %></td>
+        </tr>
+    </table>
+    <div>
+        <ul>
+            <li><%= f.submit "登録完了する"%></li>
+            <li><%= link_to "予定一覧に戻る", :users %></li>
+        </ul>
+    </div>
+<% end %>
+
+ <%= render "shared/partial2" %>　

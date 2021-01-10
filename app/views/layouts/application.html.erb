@@ -9,8 +9,12 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
-  <body>
-    <%= yield %>
-  </body>
+    <body>
+      <header>
+        <div class="title">
+          <h1>Ruby　On　Rails スケジュール管理アプリ</h1> 
+        </div>
+      </header>
+      <%= yield %>
+    </body>
 </html>
